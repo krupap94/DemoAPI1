@@ -1,0 +1,22 @@
+<p>student-list works!</p>
+<table class="table table-border">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Semester</th>
+            <th>Hobby</th>
+        </tr>
+    </thead>
+
+        <tbody *ngFor="let items of StudentList ">
+           <tr>
+            <td>{{items.id}}</td>
+            <td>{{items.sName}}</td>
+            <td>{{items.semester}}</td>
+            <td>{{items.hobby}}</td>
+            <td><input type="button" [routerLink]="['/studentdetails', items.id]" value="Detail"></td>
+           </tr>
+        </tbody>
+    
+</table>
