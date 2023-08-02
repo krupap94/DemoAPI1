@@ -18,9 +18,29 @@ constructor(private studentdataservice: StudentDataService){
     this.dataSubscription?.unsubscribe();
   }
   ngOnInit(): void {
-    this.dataSubscription = this.studentdataservice.getData().subscribe((data)=>{
+    this.getStudentList();
+    
+  }
+  private getStudentList() {
+    this.dataSubscription = this.studentdataservice.getData().subscribe((data) => {
       console.log(data);
-      this.StudentList=data;
+      this.StudentList = data;
     });
+  }
+
+  deleteStudent(k:number):void{
+    // let k: number = 0;
+    this.studentdataservice.deleteStudent(k).subscribe((data)=>{
+      // console.log('a');
+      // window.location.reload();
+      console.log(data);
+      this.getStudentList();
+      // this.dataSubscription = this.studentdataservice.getData().subscribe((data)=>{
+      //   console.log(data);
+      //   this.StudentList=data;
+      // });
+      
+    });
+    // console.log('b');
   }
 }

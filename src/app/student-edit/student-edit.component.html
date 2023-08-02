@@ -1,0 +1,17 @@
+<p>student-edit works!</p>
+<form #studentForm="ngForm" (ngSubmit)="editStudent(studentForm)" >
+    <div>
+        ID: <input type="text" name="id" id="id" [(ngModel)]="studentEdit.id" required=""> 
+      </div>
+    <div>
+      Name: <input type="text" name="sName" id="sName" [(ngModel)]="studentEdit.sName" required=""> 
+    </div>
+    <div>
+        Semester: <input type="number"  name="semester" id="semester" [(ngModel)]="studentEdit.semester"> 
+      </div>
+      <div>
+        Hobby: <input type="text" name="hobby" id="hobby" [(ngModel)]="studentEdit.hobby" > 
+      </div>
+      <input type="submit" value="Submit" >
+    
+    </form>

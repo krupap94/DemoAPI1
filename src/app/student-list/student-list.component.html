@@ -1,4 +1,7 @@
 <p>student-list works!</p>
+<div>
+    <input type="button" value="Add Student" [routerLink]="['/studentdadd']">
+</div>
 <table class="table table-border">
     <thead>
         <tr>
@@ -6,6 +9,10 @@
             <th>Name</th>
             <th>Semester</th>
             <th>Hobby</th>
+            <th>Detail</th>
+            <th>Delete</th>
+            <th>Edit</th>
+
         </tr>
     </thead>
 
@@ -16,6 +23,8 @@
             <td>{{items.semester}}</td>
             <td>{{items.hobby}}</td>
             <td><input type="button" [routerLink]="['/studentdetails', items.id]" value="Detail"></td>
+            <td><input type="button"  (click)="deleteStudent(items.id)" value="Delete"></td>
+            <td><input type="button"  [routerLink]="['/studentedit', items.id]" value="Edit"></td>
            </tr>
         </tbody>
     

@@ -1,0 +1,42 @@
+<p>Student Edit</p>
+<div class="container">
+    <form [formGroup]="studentForm" (ngSubmit)="editStudent()">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <label for="id">ID</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="id" formControlName="id">
+            </div>
+            <!-- Name -->
+<div class="row col-md-12">
+    <div class=" col-md-12">
+        <label for="name">Name</label>
+
+    </div>
+    <div class="col-md-6">
+        <input type="text" id="name" formControlName="name">
+    </div>
+</div>
+<div class="row col-md-12">
+    <div class=" col-md-12">
+        <label for="semester">Semester</label>
+
+    </div>
+    <div class="col-md-6">
+        <input type="text" id="semester" formControlName="semester">
+    </div>
+</div>
+<div class="row col-md-12">
+    <div class=" col-md-12">
+        <label for="hobby">Hobby</label>
+
+    </div>
+    <div class="col-md-6">
+        <input type="text" id="hobby" formControlName="hobby">
+    </div>
+</div>
+        </div>
+        
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<p>student-add works!</p>
+<form #studentForm="ngForm" (ngSubmit)="submitStudent(studentForm)">
+    <div>
+      Name: <input type="text" name="sName" id="sName" [(ngModel)]="studentAdd.sName" required=""> 
+    </div>
+    <div>
+        Semester: <input type="number"  name="semester" id="semester" [(ngModel)]="studentAdd.semester"> 
+      </div>
+      <div>
+        Hobby: <input type="text" name="hobby" id="hobby" [(ngModel)]="studentAdd.hobby"> 
+      </div>
+      <input type="submit" value="Submit">
+    
+    </form>
+    
+<!-- <input type="button" (click)="submitStudent()" value="Save Student"> -->
+
